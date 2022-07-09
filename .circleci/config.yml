@@ -10,12 +10,18 @@ jobs:
     docker: 
       - image: circleci/node:13.8.0
     steps: 
-      - run: echo $HELLO_ENV
+      - run: 
+          name: "Echo Environment"
+          command: |
+            echo $HELLO_ENV
   print_world:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: echo 'World'
+      - run: 
+          name: "Echo Environment"
+          command: |
+            echo $HELLO_ENV
 
 workflows:
   # Name the workflow "welcome"
