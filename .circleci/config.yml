@@ -8,18 +8,19 @@ orbs:
 jobs:
   print_hello:
     docker: 
-      - image: circleci/node:13.8.0
+      - image: cimg/base:2020.01
     steps: 
+      - checkout
       - run: 
-          name: "Echo Environment"
+          name: "Echo Environment 1"
           command: |
             echo $HELLO_ENV
   print_world:
     docker:
-      - image: circleci/node:13.8.0
+      - image: cimg/base:2020.01
     steps:
       - run: 
-          name: "Echo Environment"
+          name: "Echo Environment 2"
           command: |
             echo $HELLO_ENV
 
